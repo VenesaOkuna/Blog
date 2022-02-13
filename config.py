@@ -8,6 +8,7 @@ class Config:
     
     RANDOM_QUOTE_BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
     SECRET_KEY = os.environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://venesa:1234@localhost/blog'
     
 
 
