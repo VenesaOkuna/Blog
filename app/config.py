@@ -3,7 +3,7 @@ class Config:
     General configuration parent class
     '''
     
-    RANDOM_QUOTES_BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
+    RANDOM_QUOTE_BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
 
     
 
