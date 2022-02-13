@@ -4,6 +4,7 @@ from .models import Random_Quote
 
 
 
+
 # Getting the random quote base url
 base_url = app.config["RANDOM_QUOTE_BASE_URL"]
 

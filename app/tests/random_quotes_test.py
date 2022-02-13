@@ -1,6 +1,6 @@
 import unittest
-from models import random_quote
-Random_Quote = random_quote.Random_Quote
+from app import models
+Random_Quote = models.Random_Quote
 
 class Random_QuoteTest(unittest.TestCase):
     '''

@@ -1,25 +1,25 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{ title }}</title>
-        {% else %}
-        <title> diary of a whimpy junior developer </title>
-        {% endif %}
-    </head>
+{% extends 'base.html'%}
+
+{% block styles%}
+    {{ super() }}
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Ranga|Underdog&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Josefin+Slab|Ranga|Underdog&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Underdog&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">    
     
-        <body>
-            
-            <!-- random quotes section  -->
-            <h3> Today's Quote</h3>
-                <div class="container">
+{% endblock %}
+<body>
+{% block content %}
+<div class="container">
+    <div class="row">
+        <blockquote class="text-center text-lg">
+            <p style="font-family: 'Ranga', cursive; font-size: 40px; background-color: #626567"> <strong> " {{quote.quote}} " </strong> </p>
+            <footer style="font-size: 20px"><cite> by {{quote.author}}</cite></footer>
+        </blockquote> 
+    </div>
 
-                    <p>{{quote.quote}}</p>
-                    <p>{{quote.aothor}}</p>
-                </div>
-
-        </body>
-       
-
-</html>
+<footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3" style="text-align: center;font-family: 'Underdog'; color:#17202A; font-size: 50px; "> © 2022 Copyright </div>
+</footer>
+</body>
+{% endblock %}
