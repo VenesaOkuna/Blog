@@ -1,13 +1,13 @@
-from app import app
 import urllib.request,json
 from .models import Random_Quote
 
 
-
-
 # Getting the random quote base url
-base_url = app.config["RANDOM_QUOTE_BASE_URL"]
+base_url=None
 
+def configure_request(app):
+   global base_url
+   base_url = app.config['RANDOM_QUOTE_BASE_URL']
 
 #api call
 def get_random_quote():

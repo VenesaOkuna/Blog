@@ -1,11 +1,12 @@
-from flask import render_template
-from .request import get_random_quote
-from app import app
+from flask import render_template, request, redirect, url_for
+from . import main
+from ..request import get_random_quote
+
 
 # Views
 
 
-@app.route('/' )
+@main.route('/' )
 def index():
 
     '''
