@@ -13,10 +13,10 @@ def index():
     return render_template('index.html', title = title)
 
 
-@app.route('/random_quotes/<int:random_quotes_id>')
-def random_quotes(random_quotes_id):
+@app.route('/random_quote/<int:random_quote_id>')
+def random_quote(random_quote_id):
 
     '''
-    View random quote page function that returns the random_quotes page and its data
+    View random quote page function that returns the random_quote page and its data
     '''
-    return render_template('random_quotes.html',id = random_quotes_id)
+    return render_template('random_quote.html',id = random_quote_id)
