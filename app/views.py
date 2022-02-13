@@ -8,8 +8,9 @@ def index():
     '''
     View root page function that returns the index page and its data
     '''
-    message = 'Hello Ness'
-    return render_template('index.html',message = message)
+
+    title = 'Home - diary of a whimpy junior developer'
+    return render_template('index.html', title = title)
 
 
 @app.route('/random_quotes/<int:random_quotes_id>')
