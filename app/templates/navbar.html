@@ -15,3 +15,18 @@
             <ul class="nav navbar-nav">
                 <li><a href="/" style="font-family: 'Zen Kurenaido', sans-serif; color:#E8DAEF; font-size: 25px;" ><strong> Diary of A Whimpy Junior Dev </strong> </a></li>
         </div>
+
+    </div>
+       
+    <ul class="nav navbar-nav navbar-right">
+      {% if current_user.is_authenticated %}
+      <li><a href="{{url_for('main.profile',uname=current_user.username)}}" style="font-family: 'Josefin Slab', serif; color:#E8DAEF; font-size: 20px;"> <strong> {{current_user.username}} </strong></a></li>
+      <li><a href="{{url_for('auth.logout')}}" style="font-family: 'Josefin Slab', serif; color:#E8DAEF; font-size: 20px;"> <strong> Sign out </strong></a></li>
+      {% else %}
+      <li><a href="{{url_for('auth.login')}}" style="font-family: 'Josefin Slab', serif; color:#E8DAEF; font-size: 20px;"> <strong> Sign in </strong></a></li>
+      {%endif%}
+    </ul>
+
+    <h1 style="text-align: center;font-family: 'Underdog'; color:#E8DAEF; font-size: 50px; "> Welcome to Diary Of A Junior Dev</h1>
+
+</div>        
