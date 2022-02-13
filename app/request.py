@@ -1,21 +1,21 @@
-from xml.sax.saxutils import quoteattr
 from app import app
 import urllib.request,json
-from .models import random_quote,quote
+from .models import Random_Quote
 
-Random_Quote = random_quote.Random
+
 
 # Getting the random quote base url
 base_url = app.config["RANDOM_QUOTE_BASE_URL"]
 
+
 #api call
-def get_random_quote(category):
+def get_random_quote():
     '''
     Function that gets the json response to our url request
     '''
-    get_random_quote_url = base_url.format(category)
+    
 
-    with urllib.request.urlopen(get_random_quote_url) as url:
+    with urllib.request.urlopen(base_url) as url:
         get_random_quote_data = url.read()
         get_random_quote_response = json.loads(get_random_quote_data)
 
@@ -25,8 +25,9 @@ def get_random_quote(category):
 
     if get_random_quote_response:
        id=get_random_quote_response.get('id')
-       author=get_random_quote_response.get('quote')
-       quote=get_random_quote_response.get('author')
+       quote=get_random_quote_response.get('quote')
+       author=get_random_quote_response.get('author')
+      
        random_quote_results=Random_Quote(id,quote,author)
 
        return random_quote_results
