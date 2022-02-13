@@ -8,6 +8,7 @@ Random_Quote = random_quote.Random
 # Getting the random quote base url
 base_url = app.config["RANDOM_QUOTE_BASE_URL"]
 
+#api call
 def get_random_quote(category):
     '''
     Function that gets the json response to our url request
@@ -25,7 +26,8 @@ def get_random_quote(category):
     if get_random_quote_response:
        id=get_random_quote_response.get('id')
        author=get_random_quote_response.get('quote')
-       content=get_random_quote_response.get('author')
+       quote=get_random_quote_response.get('author')
        random_quote_results=Random_Quote(id,quote,author)
 
        return random_quote_results
+

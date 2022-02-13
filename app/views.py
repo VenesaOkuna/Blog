@@ -1,4 +1,5 @@
 from flask import render_template
+from .request import get_random_quote
 from app import app
 
 # Views
@@ -10,7 +11,10 @@ def index():
     '''
 
     title = 'Home - diary of a whimpy junior developer'
-    return render_template('index.html', title = title)
+    #making api call
+    random_quote=get_random_quote()
+    
+    return render_template('index.html',title=title,random_quote=random_quote)
 
 
 @app.route('/random_quote/<int:random_quote_id>')
