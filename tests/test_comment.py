@@ -10,3 +10,5 @@ class UserModelTest(unittest.TestCase):
 
     def test_password_setter(self):
         self.assertTrue(self.new_user.pass_secure is not None)
+
+    
