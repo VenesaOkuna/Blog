@@ -2,11 +2,13 @@ from flask import Flask
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
+from flask_uploads import UploadSet,configure_uploads,IMAGES
 from config import config_options
 
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
+photos = UploadSet('photos',IMAGES)
 bootstrap = Bootstrap()
 db = SQLAlchemy()
 
@@ -35,6 +37,9 @@ def create_app(config_name):
 
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint,url_prefix = '/authenticate')
+
+    #configure uploadset
+    configure_uploads(app,photos)
 
 
     #will add views and forms
