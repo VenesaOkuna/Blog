@@ -2,7 +2,10 @@ class Config:
     '''
     General configuration parent class
     '''
-    pass
+    
+    RANDOM_QUOTES_BASE_API = 'http://quotes.stormconsultancy.co.uk/random.json'
+
+    
 
 
 
