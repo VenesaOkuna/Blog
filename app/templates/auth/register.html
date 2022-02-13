@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block content %}
+<div class="row">
+<div class="col-md-2"> </div>
+<div class="col-md-6" style="border-style: outset;border-width: 7px; border-color: #626567"> <br> <br>
+
+{{wtf.quick_form(registration_form)}}
+<br> <br>
+</div>
+<div class="col-md-2"> </div> 
+</div>
+<br> <br> <br> <br>
+<footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3" style="text-align: center; font-family: 'Zen Kurenaido', sans-serif; color:#ffffff; font-size: 30px; "> © 2022 Copyright </div>
+</footer>
+{% endblock%}
