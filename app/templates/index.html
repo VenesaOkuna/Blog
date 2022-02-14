@@ -11,11 +11,6 @@
 {% endblock %}
 <body>
 {% block content %}
-
-<div class="container">
-    <p></p>
-</div>
-
 <div class="container">
     <div class="row">
         <blockquote class="quotes text-center text-lg">
@@ -24,6 +19,21 @@
         </blockquote> 
     </div>
 
+    <br> <br>
+    <a class="navbar-brand" href="blog/new" style="font-family: 'Josefin Slab', serif; font-size: 50px; color: #85C1E9" ><strong> Post Your Blog </strong></a> <br> <br> <br> <br> <br><br>
+    <div class="row">
+    <div class="col-md-6" style="border-style: inset;border-width: 7px; border-color: #626567">
+        {{macro.displayBlogs(blogs)}}  <br><br>
+    </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-5" style="border-style: outset;border-width: 7px; border-color: #626567">
+            <h2 style="font-family: 'Josefin Slab', serif; font-size: 30px; color: #85C1E9"><strong> Subscribe here </strong> </h2>
+            <p style="font-family: 'Josefin Slab', serif; font-size: 20px" >You will get an Email every time new post has been posted.</p>
+        {{wtf.quick_form(subscription_form)}} <br>
+        </div>
+        <!-- <div class="col-md-2"></div> -->
+    </div>
+</div> <br> <br>
 <footer class="page-footer font-small blue">
     <div class="footer-copyright text-center py-3" style="text-align: center; font-family: 'Zen Kurenaido', sans-serif; color:#ffffff; font-size: 30px; "> © 2022 Copyright </div>
 </footer>
