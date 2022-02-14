@@ -1,0 +1,6 @@
+Hello {{user.username}}
+
+There is a new Post on Diary Of A Whimpy Junior Developer Post
+Title:{{blog.title}}
+
+Kindly check To know what's going On :)
