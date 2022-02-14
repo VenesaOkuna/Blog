@@ -1,3 +1,3 @@
-Hello {{new_subscriber.username}}
-Welcome to Diary Of A Juinior Developer
+Hello {{username}}
+Welcome to Diary Of A Whimpy Juinior Developer
 We have just seen you have signed up for our blog and I want to welcome you to the family. Please enjoy the Blogs.

@@ -1,4 +1,6 @@
 {% extends 'base.html'%}
+{% import "bootstrap/wtf.html" as wtf%}
+{% import 'macros.html' as macro%}
 
 {% block styles%}
     {{ super() }}
@@ -14,8 +16,8 @@
 <div class="container">
     <div class="row">
         <blockquote class="quotes text-center text-lg">
-            <h5 class="qoute mt-5" style="font-family: 'Rajdhani', sans-serif; font-size: 25px; font-weight: 200; color: #434548; background-color: #d0d6d3"> <strong> " {{quote.quote}} " </strong> </h10>
-            <footer class="author" style="font-size: 20px; font-family: 'Sacramento', cursive;"><cite> by {{quote.author}}</cite></footer>
+            <h5 class="qoute mt-5" style="font-family: 'Rajdhani', sans-serif; font-size: 28px; font-weight: 200; color: #434548; background-color: #d0d6d3"> <strong> " {{quote.quote}} " </strong> </h10>
+            <footer class="author" style="font-size: 28px; font-family: 'Sacramento', cursive;"><cite> by {{quote.author}}</cite></footer>
         </blockquote> 
     </div>
 

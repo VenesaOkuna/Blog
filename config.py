@@ -7,9 +7,10 @@ class Config:
     '''
     
     RANDOM_QUOTE_BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SECRET_KEY = 'you-will-never-guess-this'
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://venesa:1234@localhost/blog'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 
     MAIL_SERVER = 'smtp.googlemail.com'
@@ -35,6 +36,7 @@ class DevConfig(Config):
     Development  configuration child class
 
     '''
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://venesa:1234@localhost/blog'
 
     DEBUG = True
 
