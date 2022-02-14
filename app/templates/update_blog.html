@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 style="font-family: 'Josefin Slab', serif; font-size: 30px; color: #85C1E9; text-align: center"> <strong> Update Blog </strong> </h1> <br>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6"  style="border-style: outset;border-width: 7px; border-color: #626567"> <br> <br> {{wtf.quick_form(form)}} <br> <br> </div>
+    <div class="col-md-3"></div>
+</div>
+</div>
+<footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3" style="text-align: center;font-family: 'Underdog'; color:#17202A; font-size: 50px; "> © 2019 Copyright. </div>
+</footer>
+
+{% endblock %}
